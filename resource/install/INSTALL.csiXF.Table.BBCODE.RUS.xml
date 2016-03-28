@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon addon_id="csiXF_bbCode_49D3C657" title="(CSI/XF/BBCODE) Table" version_string="1.0.1" version_id="2" url="http://cyberspace.industries/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners/>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups/>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="custom_bb_code_table_title" version_id="1" version_string="1.0.0"><![CDATA[Таблица]]></phrase>
+    <phrase title="custom_bb_code_table_desc" version_id="1" version_string="1.0.0"><![CDATA[Элемент [table] служит контейнером для элементов, определяющих содержимое таблицы. Любая таблица состоит из строк и ячеек, которые задаются с помощью тегов [tr] и [td].]]></phrase>
+    <phrase title="custom_bb_code_tr_title" version_id="1" version_string="1.0.0"><![CDATA[Таблица: строка]]></phrase>
+    <phrase title="custom_bb_code_tr_desc" version_id="1" version_string="1.0.0"><![CDATA[Тег [tr] служит контейнером для создания строки таблицы. Каждая ячейка в пределах такой строки может задаваться с помощью тега [th] или [td].]]></phrase>
+    <phrase title="custom_bb_code_th_title" version_id="1" version_string="1.0.0"><![CDATA[Таблица: ячейка (заголовочная)]]></phrase>
+    <phrase title="custom_bb_code_th_desc" version_id="1" version_string="1.0.0"><![CDATA[Тег [th] предназначен для создания одной ячейки таблицы, которая обозначается как заголовочная. Текст в такой ячейке отображается браузером обычно жирным шрифтом и выравнивается по центру. Тег [th] должен размещаться внутри контейнера [tr], который в свою очередь располагается внутри тега [table].]]></phrase>
+    <phrase title="custom_bb_code_td_title" version_id="1" version_string="1.0.0"><![CDATA[Таблица: ячейка]]></phrase>
+    <phrase title="custom_bb_code_td_desc" version_id="1" version_string="1.0.0"><![CDATA[Предназначен для создания одной ячейки таблицы. Тег [td] должен размещаться внутри контейнера [tr], который в свою очередь располагается внутри тега [table].]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates>
+    <template title="csiXF_bbCode_49D3C657_tag_table" version_id="2" version_string="1.0.1"><![CDATA[<xen:require css="csiXF_bbCode_49D3C657.css" />
+<div class="csiXF_bbCode_49D3C657 bbCodeTable"><table class="{xen:raw $option}">{xen:raw $content}</table></div>]]></template>
+    <template title="csiXF_bbCode_49D3C657_tag_tr" version_id="1" version_string="1.0.0"><![CDATA[<tr class="{xen:raw $option}">{xen:raw $content}</tr>]]></template>
+    <template title="csiXF_bbCode_49D3C657_tag_th" version_id="1" version_string="1.0.0"><![CDATA[<th>{xen:raw $content}</th>]]></template>
+    <template title="csiXF_bbCode_49D3C657_tag_td" version_id="1" version_string="1.0.0"><![CDATA[<td>{xen:raw $content}</td>]]></template>
+    <template title="csiXF_bbCode_49D3C657.css" version_id="1" version_string="1.0.0"><![CDATA[]]></template>
+  </templates>
+  <public_template_modifications/>
+  <bb_code_media_sites/>
+  <bb_codes>
+    <bb_code bb_code_id="table" bb_code_mode="callback" has_option="optional" callback_class="CSI\BbCodeTable\BbCode\Formatter\Base" callback_method="getBbCodeTable" option_regex="" trim_lines_after="0" plain_children="0" disable_smilies="0" disable_nl2br="1" disable_autolink="0" allow_empty="0" allow_signature="0" editor_icon_url="" sprite_mode="0" sprite_params_x="" sprite_params_y="" active="1">
+      <replace_html><![CDATA[]]></replace_html>
+      <replace_html_email><![CDATA[]]></replace_html_email>
+      <replace_text><![CDATA[]]></replace_text>
+      <example><![CDATA[]]></example>
+    </bb_code>
+    <bb_code bb_code_id="tr" bb_code_mode="callback" has_option="optional" callback_class="CSI\BbCodeTable\BbCode\Formatter\Base" callback_method="getBbCodeTable_tr" option_regex="" trim_lines_after="0" plain_children="0" disable_smilies="0" disable_nl2br="0" disable_autolink="0" allow_empty="0" allow_signature="0" editor_icon_url="" sprite_mode="0" sprite_params_x="" sprite_params_y="" active="1">
+      <replace_html><![CDATA[]]></replace_html>
+      <replace_html_email><![CDATA[]]></replace_html_email>
+      <replace_text><![CDATA[]]></replace_text>
+      <example><![CDATA[]]></example>
+    </bb_code>
+    <bb_code bb_code_id="th" bb_code_mode="callback" has_option="no" callback_class="CSI\BbCodeTable\BbCode\Formatter\Base" callback_method="getBbCodeTable_th" option_regex="" trim_lines_after="0" plain_children="0" disable_smilies="0" disable_nl2br="0" disable_autolink="0" allow_empty="0" allow_signature="0" editor_icon_url="" sprite_mode="0" sprite_params_x="" sprite_params_y="" active="1">
+      <replace_html><![CDATA[]]></replace_html>
+      <replace_html_email><![CDATA[]]></replace_html_email>
+      <replace_text><![CDATA[]]></replace_text>
+      <example><![CDATA[]]></example>
+    </bb_code>
+    <bb_code bb_code_id="td" bb_code_mode="callback" has_option="no" callback_class="CSI\BbCodeTable\BbCode\Formatter\Base" callback_method="getBbCodeTable_td" option_regex="" trim_lines_after="0" plain_children="0" disable_smilies="0" disable_nl2br="0" disable_autolink="0" allow_empty="0" allow_signature="0" editor_icon_url="" sprite_mode="0" sprite_params_x="" sprite_params_y="" active="1">
+      <replace_html><![CDATA[]]></replace_html>
+      <replace_html_email><![CDATA[]]></replace_html_email>
+      <replace_text><![CDATA[]]></replace_text>
+      <example><![CDATA[]]></example>
+    </bb_code>
+  </bb_codes>
+</addon>
